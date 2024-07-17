@@ -11,6 +11,9 @@
 		8C273DC62C486038001D7410 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C273DC52C486038001D7410 /* ContentView.swift */; };
 		8C273DC82C48603A001D7410 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C273DC72C48603A001D7410 /* Assets.xcassets */; };
 		8C273DCB2C48603A001D7410 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C273DCA2C48603A001D7410 /* Preview Assets.xcassets */; };
+		8C273DD22C486925001D7410 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C273DD12C486925001D7410 /* MockData.swift */; };
+		8C273DD42C487A69001D7410 /* SendFaxResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C273DD32C487A69001D7410 /* SendFaxResponse.swift */; };
+		8C273DD62C4888DC001D7410 /* DecodeJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C273DD52C4888DC001D7410 /* DecodeJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		8C273DC52C486038001D7410 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8C273DC72C48603A001D7410 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8C273DCA2C48603A001D7410 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8C273DD12C486925001D7410 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		8C273DD32C487A69001D7410 /* SendFaxResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendFaxResponse.swift; sourceTree = "<group>"; };
+		8C273DD52C4888DC001D7410 /* DecodeJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodeJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,9 @@
 				8C273DC52C486038001D7410 /* ContentView.swift */,
 				8C273DC72C48603A001D7410 /* Assets.xcassets */,
 				8C273DC92C48603A001D7410 /* Preview Content */,
+				8C273DD12C486925001D7410 /* MockData.swift */,
+				8C273DD32C487A69001D7410 /* SendFaxResponse.swift */,
+				8C273DD52C4888DC001D7410 /* DecodeJSON.swift */,
 			);
 			path = SampleAPIMock;
 			sourceTree = "<group>";
@@ -137,7 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C273DD42C487A69001D7410 /* SendFaxResponse.swift in Sources */,
 				8C273DC62C486038001D7410 /* ContentView.swift in Sources */,
+				8C273DD62C4888DC001D7410 /* DecodeJSON.swift in Sources */,
+				8C273DD22C486925001D7410 /* MockData.swift in Sources */,
 				8C273DC42C486038001D7410 /* SampleAPIMockApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
