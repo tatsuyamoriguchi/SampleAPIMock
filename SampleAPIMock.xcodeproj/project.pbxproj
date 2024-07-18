@@ -58,9 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				8C273DC32C486038001D7410 /* SampleAPIMockApp.swift */,
-				8C273DC52C486038001D7410 /* ContentView.swift */,
 				8C273DC72C48603A001D7410 /* Assets.xcassets */,
 				8C273DC92C48603A001D7410 /* Preview Content */,
+				8C273DC52C486038001D7410 /* ContentView.swift */,
 				8C273DD12C486925001D7410 /* MockData.swift */,
 				8C273DD32C487A69001D7410 /* SendFaxResponse.swift */,
 				8C273DD52C4888DC001D7410 /* DecodeJSON.swift */,

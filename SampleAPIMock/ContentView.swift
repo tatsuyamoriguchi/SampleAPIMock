@@ -18,8 +18,23 @@ protocol APIClient {
 class MockAPIClient: APIClient {
     func fetchData(completion: @escaping (Result<Data, any Error>) -> Void) {
         // Simultate successful API reponse with mock data
-        let mockData = Data() // Replace with your mock data
-        completion(.success(mockData))
+        let jsonString = """
+               {
+                   "id": 1,
+                   "name": "John Doe",
+                   "email": "john.doe@example.com"
+               }
+               """
+        guard let jsonData = jsonString.data(using: .utf8) else {
+                   let error = NSError(domain: "MockAPIErrorDomain", code: 1, userInfo: [NSLocalizedDescriptionKey: "Invalid mock data"])
+                   completion(.failure(error))
+                   return
+               }
+        completion(.success(jsonData))
+        
+        
+//        let mockData = Data() // Replace with your mock data
+//        completion(.success(mockData))
     }
 }
 
@@ -33,21 +48,38 @@ class ViewModel {
     }
     
     func fetchData() {
+        
         apiClient.fetchData { result in
-            // Handle API response
+            switch result {
+            case .success(let data):
+                // Handle the success case
+                if let json = try? JSONSerialization.jsonObject(with: data, options: []) {
+                    print("Mock data received: \(json)")
+                }
+            case .failure(let error):
+                // Handle the error case
+                print("Error: \(error.localizedDescription)")
+            }
         }
     }
 }
 
+
 struct ContentView: View {
+    @State private var viewModel = ViewModel(apiClient: MockAPIClient())
+    
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("Hello")
         }
         .padding()
+        .onAppear() {
+            viewModel.fetchData()
+        }
     }
 }
 
